@@ -13,7 +13,7 @@ public class City {
     }
 
     String name;
-    List<Courier> courierList = new ArrayList<>(10);
+    List<CourierImpl> courierList = new ArrayList<>(10);
 
     public City(String  name) {
         this.name = name;
@@ -29,6 +29,6 @@ public class City {
         }
     }
     CourierImpl getFreeCourier(OrderSystem orderSystem){
-        return courierList.stream().filter(courier -> );
-    }
+    return courierList.stream().filter(courier -> courier.isFree()).findFirst().get();
+    };
 }
